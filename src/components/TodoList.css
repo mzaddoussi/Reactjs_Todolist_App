@@ -1,0 +1,55 @@
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.completed {
+    text-decoration: line-through;
+}
+.completedButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.heading{
+    display: flex;
+    justify-content: space-between;
+}
+.addTodos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+a i{
+    color: #212529;
+}
+h4.addTodos a i {
+    color: #d0ae57;
+}
+.todoItems{
+    background-color: #fff;
+    border-radius: 15px;
+}
+.todoBlock{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #bababa;
+}
+.todoBlock:last-child {
+    border-bottom: none;
+}
+.icons-sub{
+    display: flex;
+}
+/* .listBloc{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
