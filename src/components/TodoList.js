@@ -4,7 +4,6 @@ import './TodoList.css'
 import { Link } from "react-router-dom";
 import moment from 'moment';
 import 'moment-timezone';
-import FlipMove from 'react-flip-move'
 
 class TodoList extends Component {
 
@@ -41,16 +40,15 @@ class TodoList extends Component {
                     </h4>
                 </div>
                 
-                <div className="todoItems mt-3">
+                <div className="todoItems mt-3 mb-5">
                     {!todos ?
                     <div className="mt-5"><h5>No todo left</h5></div>
                     :
                     todos.map((todo, index) => (
-                        <div key={index} className="todoBlock mx-5 py-3">
+                        <div key={index} className="todoBlock mx-5 py-3" onClick={this.completed.bind(this, todo.id)}>
                             <div className="todoCore">
                                 <h4 className={`card-title ${todo.completed ? "completed" : ""}`}>{ todo.content }</h4>
-                                <p className={`card-text ${todo.completed ? "completed" : ""}`}>{ todo.content }</p>
-                                <p>{moment().format('DD/MM/YYYY')}</p>
+                                <p className={`card-text ${todo.completed ? "completed" : ""}`}>{moment().format('dddd MMM DD,YYYY')}</p>
                             </div>
                             <div className="icons">
                                 <span className="icons-sub">
