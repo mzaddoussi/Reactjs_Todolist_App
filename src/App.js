@@ -15,7 +15,7 @@ import CompletedTodos from './components/CompletedTodos'
 function App() {
   return (
     <Provider store={store}>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
       {/* <Navbar /> */}
         <div className="App container">
           <Switch>
